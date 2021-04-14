@@ -25,10 +25,12 @@ public final class Person {
 
     @Override
     public int hashCode() {
-
-
-        return firstName.hashCode()*7+lastName.hashCode()*17+gender.hashCode()*19;
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());             result = prime * result; result = prime * result +
+                ((lastName == null) ? 0 : lastName.hashCode()); return result;
     }
+
 
     @Override
     public String toString() {
