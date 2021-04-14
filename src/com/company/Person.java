@@ -25,7 +25,9 @@ public final class Person {
 
     @Override
     public int hashCode() {
-        return firstName.length()*8 + lastName.length()*8 + ;
+
+
+        return firstName.hashCode()*7+lastName.hashCode()*17+gender.hashCode()*19;
     }
 
     @Override
