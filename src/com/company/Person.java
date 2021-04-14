@@ -12,21 +12,27 @@ public final class Person {
         this.lastName = lastName;
         this.gender = gender;
     }
-
     @Override
-    public boolean equals(Object a) {
-        if (this== a) return true;
-        if (!(a instanceof Person)) return false;
 
-        Person person=(Person) a;
-        return firstName==person.firstName &&
-                lastName==person.lastName &&
-                gender==person.gender;
-    }
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+
+            if(!(o instanceof Person)){
+                return false;
+            }
+
+            Person person = (Person) o;
+
+            return firstName == person.firstName && lastName == person.lastName && gender == person.gender;
+        }
+
+
 
     @Override
     public int hashCode() {
-        return firstName.length() + lastName.length();
+        return firstName.length()*8 + lastName.length()*8 ;
     }
 
     @Override
