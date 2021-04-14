@@ -15,13 +15,6 @@ public final class Person {
     @Override
 
         public boolean equals(Object o) {
-            if (this == o) {
-                return true;
-            }
-
-            if(!(o instanceof Person)){
-                return false;
-            }
 
             Person person = (Person) o;
 
@@ -32,7 +25,7 @@ public final class Person {
 
     @Override
     public int hashCode() {
-        return firstName.length()*8 + lastName.length()*8 ;
+        return firstName.length()*8 + lastName.length()*8 + ;
     }
 
     @Override
