@@ -18,7 +18,7 @@ public final class Person {
 
             Person person = (Person) o;
 
-            return firstName == person.firstName && lastName == person.lastName && gender == person.gender;
+            return firstName.equals(person.firstName) && lastName.equals(person.lastName) && gender==person.gender;
         }
 
 
